@@ -13,7 +13,7 @@ interface CityWeather {
   windSpeed?: number;
 }
 
-interface DailyForeCast {
+export interface DailyForeCast {
   name: string;
   condition?: string;
   temp: number;
@@ -86,7 +86,7 @@ export class WeatherService {
       days.push({
         condition: getRandomCondition(),
         temp: getRandomTemp(),
-        name: moment().add(i, 'day').format('dddd') 
+        name: moment().add(i, 'day').format('dddd')
       });
     }
     return days;
