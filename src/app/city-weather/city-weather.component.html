@@ -3,7 +3,11 @@
     {{ name }}
   </span>
   <div class="weather-icon__container">
-    <!-- Add weather icon depending on condition -->
+    <i class="fas fa-bolt fa-10x" *ngIf="condition == 'storm'"></i>
+    <i class="fas fa-cloud-rain fa-10x" *ngIf="condition == 'rain'"></i>
+    <i class="fas fa-sun fa-10x" *ngIf="condition == 'sun'"></i>
+    <i class="fas fa-cloud fa-10x" *ngIf="condition == 'clouds'"></i>
+    <i class="fas fa-snowflake fa-10x" *ngIf="condition == 'snow'"></i>
     <i class="fas fa-10x"></i>
   </div>
   <div class="temperature-text__container">
