@@ -7,6 +7,7 @@ import { CityWeatherComponent } from './city-weather/city-weather.component';
 import { DetailsComponent } from './details/details.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localeFr);
 
@@ -20,6 +21,7 @@ registerLocaleData(localeFr);
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' },
